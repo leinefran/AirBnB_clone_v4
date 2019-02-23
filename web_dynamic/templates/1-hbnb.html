@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width">
     <title>Holberton AirBnB</title>
     <SCRIPT src="https://code.jquery.com/jquery-3.2.1.min.js"></SCRIPT>
-    <script type="text/javascript" src="static/scripts/1-hbnb.js"></script>
+    <script type="text/javascript" src="../static/scripts/1-hbnb.js?{{ cache_id }}"></script>
 
     <!-- FAVICON -->
 
@@ -76,7 +76,7 @@
 	    <ul class="popover">
 	      {% for amenity in amens|sort(attribute='name') %}
 	      <LI>
-		<INPUT data-id=":amenity_id" data-name=":amenity_name"
+		<INPUT data-id="{{ amenity.id }}" data-name="{{ amenity.name }}"
 		       type="checkbox">
 		{{ amenity.name }} </INPUT>
 	      </LI>
