@@ -14,8 +14,8 @@ header {
 }
 
 #api_status {
-    text-align: right;
-    vertical-align: middle;
+    float: right;
+    /* vertical-align: middle; */
     border-right: 30px;
     background-color: #cccccc;
     border-radius: 50%;
@@ -24,5 +24,5 @@ header {
 }
 
 .available {
-    background-color: #ff545f;
+    background-color: #ff545f !important;
 }
