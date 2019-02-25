@@ -3,19 +3,22 @@
 $(document).ready(function () {
   /*
   function: handle changes on each INPUT checkbox tag
-          if the checkbox is checked, add data name to the list.
-          if the checkbox is unchecked, remove data name from the list.
+          if the checkbox is checked, add data name to the list_name.
+          if the checkbox is unchecked, remove data name from the list_name.
   */
-  let list = [];
+  let list_name = [];
+  let list_id = [];
   $('INPUT').on('change', function () {
     if ($(this).is(':checked')) {
-      list.push($(this).attr('data-name'));
-      $('.amenities h4').text(list);
+      list_name.push($(this).attr('data-name'));
+      list_id.push($(this).attr('data-id'));
+      $('.amenities h4').text(list_name);
     } else {
-      list.splice(list.indexOf($(this).attr('data-name')), 1);
-      $('.amenities h4').text(list);
+      list_name.splice(list_name.indexOf($(this).attr('data-name')), 1);
+      list_id.splice(list_id.indexOf($(this).attr('data-id')), 1);
+      $('.amenities h4').text(list_name);
     }
-    if (list.length === 0) {
+    if (list_name.length === 0) {
       $('.amenities h4').html('&nbsp;');
     }
   });
@@ -70,14 +73,16 @@ $(document).ready(function () {
     }
   });
 }
-filter ({});
+/*
+  function: handle submit button, if the button is clicked,
+  empty child nodes, add title 'Place', and call filter function
+  with a list of amenities id
+  */
+  $('button').on('click', function () {  
+    $('SECTION.places').empty();
+    $('SECTION.places').append('<h1>Places</h1>');
+    filter({'amenities': list_id});
+    });
 });
 
-  /*
-  function: that handles when  the BUTTON tag is clicked,
-  a new POST request to places_search should be made with
-  the list of Amenities checked */
-  $('button').on('click', function () {
-    $('SECTION.places').remove();
-    filter({'amenities': list});
-    });
+  
