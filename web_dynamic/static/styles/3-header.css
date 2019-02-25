@@ -10,12 +10,14 @@ header {
 	background-position: 20px 50%;
 	height: 70px;
 	width: 100%;
-	border-bottom: 1px solid #CCCCCC;
+    border-bottom: 1px solid #CCCCCC;
+    display: flex;
+    justify-content: flex-end;
 }
 
 #api_status {
-    float: right;
-    /* vertical-align: middle; */
+    margin-right: 1%; 
+    align-self: center;
     border-right: 30px;
     background-color: #cccccc;
     border-radius: 50%;
