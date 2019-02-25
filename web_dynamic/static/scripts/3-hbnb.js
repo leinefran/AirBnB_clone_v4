@@ -37,10 +37,11 @@ $(document).ready(function () {
   function: make a post request, and append tag and content to
             tag 'SECTION.places' if success.
   */
+ function filter (data) {
   $.ajax({
     type: 'POST',
     url: 'http://0.0.0.0:5001/api/v1/places_search/',
-    data: '{}',
+    data: JSON.stringify(data),
     contentType: 'application/json',
     success: function (res) {
       for (let idx = 0; idx < res.length; idx++) {
@@ -68,4 +69,6 @@ $(document).ready(function () {
       }
     }
   });
+}
+filter ({});
 });
