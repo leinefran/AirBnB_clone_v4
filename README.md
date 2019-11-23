@@ -4,7 +4,7 @@
 # AirBnB Clone: Phase # 4
 AirBnB clone - Web dynamic
 
-![screenschot](/screenshots/screenshot1.png)
+![Alt text](/AirBnB_clone_v4/Screenshot 2019-11-22 19.59.45.png?raw=true "Homepage")
 
 # AirBnB Clone: Phase # 3
 
