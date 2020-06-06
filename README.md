@@ -1,6 +1,3 @@
-<img src="https://github.com/jarehec/AirBnB_clone_v3/blob/master/dev/HBTN-hbnb-Final.png" width="160" height=auto />
-
-
 # AirBnB Clone: Phase # 4
 AirBnB clone - Web dynamic
 
